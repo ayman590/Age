@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgeMetric - حول الموقع</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <header class="header">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <h1 class="logo">AgeMetric</h1>
+    <div class="header-controls">
+      <button class="theme-toggle" onclick="toggleTheme()" title="تغيير الإضاءة">🌙</button>
+      <select class="language-selector" onchange="changeLanguage(this.value)">
+        <option value="ar">العربية</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="ja">日本語</option>
+        <option value="zh">中文</option>
+        <option value="ko">한국어</option>
+        <option value="de">Deutsch</option>
+        <option value="tr">Türkçe</option>
+        <option value="fa">فارسی</option>
+        <option value="fil">Filipino</option>
+        <option value="ru">Русский</option>
+        <option value="th">ไทย</option>
+        <option value="sr">Српски</option>
+        <option value="sv">Svenska</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+  </header>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <button class="close-btn" onclick="toggleSidebar()">×</button>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item" data-translate="home">الصفحة الرئيسية</a>
+        <a href="about.html" class="nav-item active" data-translate="about">حول الموقع</a>
+        <a href="https://discord.gg/support" target="_blank" class="nav-item" data-translate="support">الانضمام إلى سيرفر الدعم</a>
+      </nav>
+      <div class="version" data-translate="version">الإصدار 1.0.0</div>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <section class="about-section">
+      <h2 class="section-title" data-translate="aboutTitle">حول AgeMetric</h2>
+      <div class="about-content">
+        <div class="about-card">
+          <h3 data-translate="aboutDesc1Title">ما هو AgeMetric؟</h3>
+          <p data-translate="aboutDesc1">AgeMetric هو أداة متقدمة لحساب العمر تتيح لك اكتشاف عمرك بطرق مختلفة ومثيرة. من خلال إدخال تاريخ ميلادك، يمكنك معرفة عمرك بالتفصيل الدقيق، برجك الفلكي، وحتى عمرك على الكواكب الأخرى!</p>
+        </div>
+        
+        <div class="about-card">
+          <h3 data-translate="aboutDesc2Title">لماذا AgeMetric؟</h3>
+          <p data-translate="aboutDesc2">نحن نقدم أكثر من مجرد حساب بسيط للعمر. نوفر لك معلومات شاملة ومفصلة تشمل عدد الأيام والساعات والدقائق والثواني التي عشتها، بالإضافة إلى معلومات فلكية وصحية مفيدة.</p>
+        </div>
+        
+        <div class="about-card">
+          <h3 data-translate="aboutDesc3Title">الميزات الرئيسية</h3>
+          <ul class="features-list" id="featuresList"></ul>
+        </div>
+        
+        <div class="about-card">
+          <h3 data-translate="aboutDesc4Title">من نحن؟</h3>
+          <p data-translate="aboutDesc4">فريق AgeMetric مكرس لتقديم أفضل تجربة في حساب العمر. نحن نؤمن بأن العمر ليس مجرد رقم، بل قصة مليئة بالتفاصيل المثيرة والمعلومات الشيقة.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p data-translate="copyright">© 2024 AgeMetric. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

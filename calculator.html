@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgeMetric - احسب عمرك</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <header class="header">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <h1 class="logo">AgeMetric</h1>
+    <div class="header-controls">
+      <button class="theme-toggle" onclick="toggleTheme()" title="تغيير الإضاءة">🌙</button>
+      <select class="language-selector" onchange="changeLanguage(this.value)">
+        <option value="ar">العربية</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="ja">日本語</option>
+        <option value="zh">中文</option>
+        <option value="ko">한국어</option>
+        <option value="de">Deutsch</option>
+        <option value="tr">Türkçe</option>
+        <option value="fa">فارسی</option>
+        <option value="fil">Filipino</option>
+        <option value="ru">Русский</option>
+        <option value="th">ไทย</option>
+        <option value="sr">Српски</option>
+        <option value="sv">Svenska</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+  </header>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <button class="close-btn" onclick="toggleSidebar()">×</button>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item" data-translate="home">الصفحة الرئيسية</a>
+        <a href="about.html" class="nav-item" data-translate="about">حول الموقع</a>
+        <a href="https://discord.gg/support" target="_blank" class="nav-item" data-translate="support">الانضمام إلى سيرفر الدعم</a>
+      </nav>
+      <div class="version" data-translate="version">الإصدار 1.0.0</div>
+    </div>
+  </div>
+
+  <main class="calculator-main">
+    <div class="calculator-container">
+      <h2 class="calculator-title" data-translate="calcTitle">احسب عمرك بالتفصيل</h2>
+      
+      <div class="input-section">
+        <label data-translate="birthDateLabel">أدخل تاريخ ميلادك:</label>
+        <div class="date-input-container">
+          <input type="date" id="birthDate" class="date-input" lang="ar">
+          <button class="info-btn" onclick="showInfoMessage()" title="معلومات">ℹ️</button>
+        </div>
+        <button class="calculate-btn" onclick="calculateAge()" data-translate="calculateBtn">احسب</button>
+      </div>
+
+      <div id="results" class="results-container" style="display: none;">
+        <div class="result-section">
+          <h3 data-translate="ageTitle">العمر</h3>
+          <div class="age-display" id="ageDisplay"></div>
+        </div>
+
+        <div class="result-section">
+          <h3 data-translate="detailsTitle">التفاصيل الكاملة</h3>
+          <div class="details-grid" id="detailsGrid"></div>
+        </div>
+
+        <div class="result-section">
+          <h3 data-translate="zodiacTitle">البرج الفلكي</h3>
+          <div class="zodiac-display" id="zodiacDisplay"></div>
+        </div>
+
+        <div class="result-section">
+          <h3 data-translate="birthdayTitle">عيد الميلاد القادم</h3>
+          <div class="birthday-display" id="birthdayDisplay"></div>
+        </div>
+
+        <div class="result-section">
+          <h3 data-translate="planetsTitle">عمرك على الكواكب</h3>
+          <div class="planets-grid" id="planetsGrid"></div>
+        </div>
+
+        <div class="result-section">
+          <h3 data-translate="earthStatsTitle">إحصائيات الأرض</h3>
+          <div class="earth-stats" id="earthStats"></div>
+        </div>
+
+        <div class="result-section">
+          <h3 data-translate="healthTitle">معلومات صحية</h3>
+          <div class="health-info" id="healthInfo"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p data-translate="copyright">© 2024 AgeMetric. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="calculator.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgeMetric - حاسبة العمر</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <!-- Sidebar Menu -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <button class="close-btn" onclick="toggleSidebar()">×</button>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item active" data-translate="home">الصفحة الرئيسية</a>
+        <a href="about.html" class="nav-item" data-translate="about">حول الموقع</a>
+        <a href="https://discord.gg/support" target="_blank" class="nav-item" data-translate="support">الانضمام إلى سيرفر الدعم</a>
+      </nav>
+      <div class="version" data-translate="version">الإصدار 1.0.0</div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <h1 class="logo">AgeMetric</h1>
+    <div class="header-controls">
+      <button class="theme-toggle" onclick="toggleTheme()" title="تغيير الإضاءة">🌙</button>
+      <select class="language-selector" onchange="changeLanguage(this.value)">
+        <option value="ar">العربية</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="ja">日本語</option>
+        <option value="zh">中文</option>
+        <option value="ko">한국어</option>
+        <option value="de">Deutsch</option>
+        <option value="tr">Türkçe</option>
+        <option value="fa">فارسی</option>
+        <option value="fil">Filipino</option>
+        <option value="ru">Русский</option>
+        <option value="th">ไทย</option>
+        <option value="sr">Српски</option>
+        <option value="sv">Svenska</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="hero">
+      <h2 class="hero-title" data-translate="welcomeTitle">اكتشف عمرك بالتفصيل</h2>
+      <p class="hero-description" data-translate="welcomeDesc">احسب عمرك بالسنوات، الأشهر، الأيام، الساعات، الدقائق والثواني. اكتشف برجك، عمرك على الكواكب الأخرى والمزيد!</p>
+      <button class="cta-button" onclick="goToCalculator()" data-translate="startBtn">ابدأ الآن</button>
+    </section>
+
+    <section class="features">
+      <h3 class="section-title" data-translate="featuresTitle">مميزات الأداة</h3>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h4 data-translate="feature1Title">حساب دقيق للعمر</h4>
+          <p data-translate="feature1Desc">احسب عمرك بالتفصيل الدقيق</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌟</div>
+          <h4 data-translate="feature2Title">اكتشف برجك</h4>
+          <p data-translate="feature2Desc">تعرف على برجك الفلكي</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🪐</div>
+          <h4 data-translate="feature3Title">العمر على الكواكب</h4>
+          <p data-translate="feature3Desc">اكتشف عمرك على كواكب النظام الشمسي</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎂</div>
+          <h4 data-translate="feature4Title">العد التنازلي لعيد الميلاد</h4>
+          <p data-translate="feature4Desc">الأيام المتبقية لعيد ميلادك القادم</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h3 class="section-title" data-translate="howItWorksTitle">كيف يعمل؟</h3>
+      <div class="info-content">
+        <p data-translate="howItWorksDesc">ببساطة، أدخل تاريخ ميلادك وسنقوم بحساب كل التفاصيل عن عمرك بما في ذلك العمر بالسنوات والأشهر والأيام والساعات والدقائق والثواني، بالإضافة إلى معلومات مثيرة عن برجك وعمرك على الكواكب الأخرى!</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p data-translate="copyright">© 2024 AgeMetric. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
